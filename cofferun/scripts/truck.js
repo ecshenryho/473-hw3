@@ -1,5 +1,5 @@
 (function (window) {
-  'use strict';// double quotes or single
+  'use strict';
   var App =window.App || {};
   function Truck(truckId, db) {
     this.truckId=truckId;
