@@ -5,7 +5,11 @@
     this.truckId = truckId;
     this.db = db;
   }
+<<<<<<< HEAD
   Truck.prototype.createOrder = function(order) {
+=======
+  Truck.prototype.createOrder = function (order){
+>>>>>>> 19b33982d02cf1f3990edfb5af56879e9f8db9f0
     console.log("Adding order for "+ order.emailAddress);
     this.db.add(order.emailAddress, order);
   };
