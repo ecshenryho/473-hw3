@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -8,8 +8,9 @@
 </head>
 
 <body class="container">
+
   <header>
-    <h1>CoffeeRun</h1>
+    <h1>Coffeerun</h1>
   </header>
   <section>
     <div class="panel panel-default">
@@ -21,52 +22,55 @@
           </div>
           <div class="form-group">
             <label for="emailInput">Email</label>
-            <input class="form-control" type="email" name="emailAddress" value="" id="emailInput" placeholder="dr@who.com">
+            <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="dr@who.com">
           </div>
           <div class="radio">
             <label>
-              <input for="" type="radio" name="size" value="short">
-              Short
+              <input type="radio" name="size" value="short">
+              short
             </label>
           </div>
           <div class="radio">
             <label>
-              <input for="" type="radio" name="size" value="short" checked>
+              <input type="radio" name="size" value="tall" checked>
               Tall
             </label>
           </div>
           <div class="radio">
             <label>
-              <input for="" type="radio" name="size" value="short">
+              <input type="radio" name="size" value="grande">
               Grande
             </label>
+            <div class="form-group">
+              <label for="flavorShot">Flavor Shot</label>
+              <select id="flavorShot" class="form-group" name="flavor">
+                <option value="">None</option>
+                <option value="caramel">Caramel</option>
+                <option value="almond">Almond</option>
+                <option value="mocha">Mocha</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="strengthLevel">Caffeine Rating</label>
+              <input type="range" name="strength" value="30" id="strengthLevel">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="reset" class="btn btn-default">Reset</button>
           </div>
-          <div class="form-group">
-            <label for="flavorShot">Flavor Shot</label>
-            <select class="form-control" id="flavorShot" name="flavor">
-              <option value="">None</option>
-              <option value="caramel">Caramel</option>
-              <option value="alomond">Almond</option>
-              <option value="mocha">Mocha</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="strengthLevel">Caffeine Rating</label>
-            <input type="range" name="strength" value="30" id="strengthLevel">
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-          <button type="reset" class="btn btn-default">Reset</button>
         </form>
       </div>
     </div>
+
     <div class="panel panel-default">
-     <div class="panel-body">
-       <h4>Pending Orders:</h4>
-       <div data-coffee-order="checklist"></div>
-     </div>
-   </div>
+      <div class="panel-body">
+        <h4>Pending Orders:</h4>
+        <div data-coffee-order="checklist">
+
+        </div>
+      </div>
+    </div>
   </section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
   <script src="scripts/checklist.js" charset="utf-8"></script>
   <script src="scripts/formhandler.js" charset="utf-8"></script>
   <script src="scripts/datastore.js" charset="utf-8"></script>
